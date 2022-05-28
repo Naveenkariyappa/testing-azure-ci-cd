@@ -31,18 +31,18 @@ jobs:
     - name: Install dependencies 📦
       #Using npm ci is generally faster than running npm install
       run: |
-        cd testing-azure-ci-cd
+        cd testing1
         npm ci
     - name: Build the app 🏗
       run: |
-        cd testing-azure-ci-cd
+        cd testing1
         npm run build
     - name: Run component tests 🔸
       run: |
-        cd testing-azure-ci-cd
+        cd testing1
         npm run test
     - name: Start the app 📤
       run: |
-        cd testing-azure-ci-cd
+        cd testing1
         npm start &
         npx wait-on --timeout 60000
